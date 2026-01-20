@@ -12,33 +12,28 @@
 #
 # ============================================================================
 
-# Farger for output
-$RED = "`e[31m"
-$GREEN = "`e[32m"
-$YELLOW = "`e[33m"
-$NC = "`e[0m"
-
-# Hjelpefunksjoner
+# Hjelpefunksjoner med Powershell farger
 function Write-Success {
     param([string]$Message)
-    Write-Host "$GREEN✓ $Message$NC"
+    Write-Host "✓ $Message" -ForegroundColor Green
 }
 
 function Write-Error {
     param([string]$Message)
-    Write-Host "$RED✗ $Message$NC"
+    Write-Host "✗ $Message" -ForegroundColor Red
 }
 
 function Write-Info {
     param([string]$Message)
-    Write-Host "$YELLOW$Message$NC"
+    Write-Host $Message -ForegroundColor Yellow
 }
 
 function Write-Header {
     param([string]$Message)
-    Write-Host "`n$YELLOW========================================$NC"
-    Write-Host "$YELLOW$Message$NC"
-    Write-Host "$YELLOW========================================$NC"
+    Write-Host ""
+    Write-Host "========================================" -ForegroundColor Yellow
+    Write-Host $Message -ForegroundColor Yellow
+    Write-Host "========================================" -ForegroundColor Yellow
 }
 
 # Helper function to safely convert output to string and trim
@@ -246,9 +241,10 @@ try {
 }
 
 # Success
-Write-Host "`n$GREEN========================================$NC"
-Write-Host "$GREEN✓ ALLE TESTER BESTÅTT!$NC"
-Write-Host "$GREEN========================================$NC"
+Write-Host ""
+Write-Host "========================================" -ForegroundColor Green
+Write-Host "✓ ALLE TESTER BESTÅTT!" -ForegroundColor Green
+Write-Host "========================================" -ForegroundColor Green
 
 # Cleanup
 Write-Info "`nStopper PostgreSQL..."
