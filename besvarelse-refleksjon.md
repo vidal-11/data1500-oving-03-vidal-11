@@ -10,7 +10,10 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Docker gjør jobbing med databasen mer konsistent, slik at mange kan jobbe med det samme med samme konfigurering og versjon, uavhengig av OS eller maskin. Det gjør at situasjoner hvor noe "funker for andre, men ikke for meg" ikke lenger er et problem.
+
+I tillegg kan man kjøre mange containers i en enkel server fordi de krever ikke mye.
+(kilde: https://youtu.be/s69slvfVp0I?t=197)
 
 ---
 
@@ -18,7 +21,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Persistent volum er en måte å fortsatt ha data uansett hva som skjer med containeren. Så hvis du sletter containeren du mister ikke dataen.
 
 ---
 
@@ -26,7 +29,8 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+docker-compose down stopper og sletter alle containers, nettverk, volumer og images som er lagd av docker-compose up. volumer som er eksterne dvs. persistent volum mistes ikke.
+(kilde så jeg ikke glemmer: https://docs.docker.com/reference/cli/docker/compose/down/)
 
 ---
 
@@ -34,7 +38,11 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+-d gjør at docker compose up kjøres i bakgrunnen
+
+Første gang bygger, starter eller restarter, lager og kobler terminalen til containers.
+
+Andre gang ser om det er allerede finnes containere, og hvis det gjør så ser den om image eller service er oppdatert. Hvis en eller begge er oppdaterte, slettes containeren fra før og det lages en ny en, som i den første gangen. Dette er raskere siden det gjenbruker images eller containers med mindre image eller services har blitt oppdatert.
 
 ---
 
@@ -42,7 +50,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Er ikke sikker. Hovedsakelig ville jeg brukt en github repo eller Docker Hub
 
 ---
 
@@ -52,7 +60,9 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+INNER JOIN velger poster som har samme verdier i to tabeller
+LEFT JOIN velger alle poster fra den første tabellen og poster som har samme verdi som andre tabell
+Hvis man har en butikk og ser alle kunder, så kan du se om de er medlemmer av butikken din eller om de har kjøpt noe.
 
 ---
 
@@ -60,7 +70,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Vi bruker fremmednøkler for å referere til den verdien i en anne post i en annen blokk, så hvis du endrer i den posten f.eks epost til en kunde så skal alt som bruker den eposten kunne referere til den nye eposten. 
 
 ---
 
@@ -68,7 +78,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+GROUP BY grupperer poster slik at man kan se hvor mange av en id det finnes. Litt bedre å forklare med et eksempel: La oss si du er en butikk som selger til alle land, så vil du se hvor mange fra et land som kjøper varene dine. Da bruker man GROUP BY, som samler rader som har samme verdi i en valgt kolonne. Det er nødvendig for å holde orden.
 
 ---
 
@@ -76,7 +86,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+En indeks er som en innholdsfortegnelse i en bok. Databasen bruker en indeks for å finne rader raskere, og indeksen er knyttet til en eller flere kolonner, som navn, id, epost, eller dato.
 
 ---
 
